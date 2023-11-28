@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 import random
-import math
 number = random.randint(-10000, 10000)
-m = number % 10 if number > 10 else number % -10
-print("Last digit of {} is {} and is".format(number, m), end="")
-if m > 5:
-    print("greater than 5")
-elif m == 0:
-    print("0")
-elif m < 6:
-    print("less than 6 and not 0")
+if number >= 0:
+    last_digit = number % 10
+else:
+    last_digit = ((number * -1) % 10) * -1
+
+m = "Last digit of %d is %d and is" % (number, last_digit)
+if last_digit == 0:
+    print(m, "0")
+elif last_digit > 5:
+    print(m, "greater than 5")
+else:
+    print(m, "less than 6 and not 0")
