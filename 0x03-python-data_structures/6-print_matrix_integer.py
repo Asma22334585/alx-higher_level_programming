@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
+    if not matrix:
+        return None
     for sm in matrix:
         if len(sm) == 0:
             print()
