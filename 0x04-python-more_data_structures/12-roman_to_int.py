@@ -9,4 +9,3 @@ def roman_to_int(roman_string):
         n = x[r]
         s += n if s < n * 5 else -n
     return s
-
