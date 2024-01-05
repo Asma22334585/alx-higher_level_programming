@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""prevents dynamically creating attributes"""
-
+"""defines LockedClass"""
 
 class LockedClass:
-    """
-    except if the new instance attribute is called first_name
-    """
+    """except if the new instance attribute is called first_name"""
+
      __slots__ = ['first_name']
