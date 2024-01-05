@@ -3,5 +3,6 @@
 
 
 class LockedClass:
-     """Class to prevent dynamic attributes creation"""
+    """Class to prevent dynamic attributes creation"""
+
     __slots__ = ['first_name']
