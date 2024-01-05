@@ -3,8 +3,9 @@
 
 
 class LockedClass:
-    """
-    except if the new instance attribute is called first_name
-    """
+     """Class to prevent dynamic attributes creation"""
+    __slots__ = ['first_name']
 
-     __slots__ = ['first_name']
+    def __init__(self):
+        """Init method"""
+        pass
