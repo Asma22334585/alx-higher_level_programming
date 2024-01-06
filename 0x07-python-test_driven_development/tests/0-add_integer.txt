@@ -1,0 +1,30 @@
+Import function:
+        >>> add_integer = __import__('0-add_integer').add_integer
+
+Test a and b integers:
+     >>> add_integer(1, 2)
+     3
+
+Test a and b integers with a negative value:
+     >>> add_integer(100, -2)
+     98
+
+Test one int argument:
+     >>> add_integer(2)
+     100
+
+Test a as a float, b as a negative integer:
+     >>> add_integer(100.3, -2)
+     98
+
+Test a as positive integer, b as string:
+     >>> add_integer(4, "School")
+     Traceback (most recent call last):
+     ...
+     TypeError: b must be an integer
+
+Test 'None' passed:
+     >>> add_integer(None)
+     Traceback (most recent call last):
+     ...
+     TypeError: a must be an integer
