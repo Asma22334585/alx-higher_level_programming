@@ -1,0 +1,40 @@
+Import module:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test:
+    >>> say_my_name("Asma", "Guesmi")
+    My name is Asma Guesmi
+
+Test firstname:
+    >>> say_my_name("Asma")
+    My name is Asma 
+
+Test empty firstname:
+    >>> say_my_name("", "Guesmi")
+    My name is  Guesmi
+
+Test argument1 not str:
+    >>> say_my_name(5, "Guesmi")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Test argument2 not str:
+    >>> say_my_name("Asma", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+Test both arg1/arg2 empty:
+    >>> say_my_name("", "")
+    My name is  
+
+Test empty lastname:
+    >>> say_my_name("Asma", "")
+    My name is Asma 
+
+Test arg1/arg2 not str:
+    >>> say_my_name(4, 23)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string

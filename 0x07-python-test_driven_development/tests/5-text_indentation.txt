@@ -1,0 +1,49 @@
+Import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test string:
+    >>> text_indentation(450)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test none:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test:
+    >>> text_indentation("Asma Guesmi")
+    Asma Guesmi
+
+Test with spaces1:
+    >>> text_indentation("Asma   ")
+    Asma
+
+Test with spaces2:
+    >>> text_indentation("      Asma   ")
+    Asma
+
+Test with empty string:
+    >>> text_indentation("")
+
+
+Test characters:
+    >>> text_indentation("      ?:  :  ")
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test str with characters:
+    >>> text_indentation("Asma:   Guesmi? Tunisia. Kasserine  ")
+    Asma:
+    <BLANKLINE>
+    Guesmi?
+    <BLANKLINE>
+    Tunisia.
+    <BLANKLINE>
+    Kasserine
