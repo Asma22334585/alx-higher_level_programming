@@ -31,3 +31,8 @@ Test append:
     >>> x.append(6)
     >>> x
     [6]
+
+Test Class Type:
+    >>> x = MyList()
+    >>> type(x) == MyList
+    True
