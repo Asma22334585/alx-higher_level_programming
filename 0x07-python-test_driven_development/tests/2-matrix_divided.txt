@@ -36,3 +36,15 @@ Test division by zero:
     Traceback (most recent call last):
     ...
     ZeroDivisionError: division by zero
+
+Test division string:
+    >>> matrix_divided([[3, 2]], "Asma")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+Test without arg:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
