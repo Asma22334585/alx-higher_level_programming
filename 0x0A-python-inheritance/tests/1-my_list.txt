@@ -25,3 +25,9 @@ Test negative int:
     >>> x = MyList([-10, -14, -250, 0, -124, -12])
     >>> x.print_sorted()
     [-250, -124, -14, -12, -10, 0]
+
+Test append:
+    >>> x = MyList()
+    >>> x.append(6)
+    >>> x
+    [6]
