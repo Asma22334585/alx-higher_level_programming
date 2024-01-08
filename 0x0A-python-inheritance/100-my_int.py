@@ -4,13 +4,9 @@
 
 class MyInt(int):
     """ inherits from int"""
-     def __init__(self, numbr):
-        """Initializes MyInt
-        Args:
-            numbr: int
-        """
-
-        self.numbr = numbr
+    def __new__(clas, *arg, **kwarg):
+        """Initializes MyInt"""
+        return super(MyInt, clas).__new__(clas, *arg, **kwarg)
 
     def __eq__(self, value):
         """Inverts == to !="""
