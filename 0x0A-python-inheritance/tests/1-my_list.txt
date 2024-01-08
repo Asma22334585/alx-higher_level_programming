@@ -1,0 +1,27 @@
+Import function from module:
+    >>> MyList = __import__('1-my_list').MyList
+
+Test empty list:
+    >>> x = MyList()
+    >>> x.print_sorted()
+    []
+
+Test list 1:
+    >>> x = MyList([6, 17, 10])
+    >>> x.print_sorted()
+    [6, 10, 17]
+
+Test list 2:
+    >>> x = MyList([5, 10, 12])
+    >>> x.print_sorted()
+    [5, 10, 12]
+
+Test negative and positive int:
+    >>> x = MyList([-10, -14, 250, 0, 124, -12])
+    >>> x.print_sorted()
+    [-14, -12, -10, 0, 124, 250]
+
+Test negative int:
+    >>> x = MyList([-10, -14, -250, 0, -124, -12])
+    >>> x.print_sorted()
+    [-250, -124, -14, -12, -10, 0]
