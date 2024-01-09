@@ -2,15 +2,19 @@
 """task 7"""
 
 import sys
+import os.path
+import sys
+
 save_to_json_file = __import__("7-save_to_json_file").save_to_json_file
 load_from_json_file = __import__("8-load_from_json_file").load_from_json_file
 
-arglist = list(sys.argv[1:])
+myfile = "add_item.json"
+json = []
 
-try:
-    old_data = load_from_json_file('add_item.json')
-except Exception:
-    old_data = []
+if os.path.exists(myfile):
+    json = load_from_json_file(myfile)
 
-old_data.extend(arglist)
-save_to_json_file(old_data, 'add_item.json')
+for arg in range(1, len(sys.argv)):
+    json.append(sys.argv[arg])
+
+save_to_json_file(json, myfile)
