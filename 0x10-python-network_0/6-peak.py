@@ -2,12 +2,11 @@
 """ Finds the peak in a list of unsorted integers
 """
 
-
 def find_peak(list_of_integers):
     """
     Args:
         list_of_integers(int): list of integers to find peak
-    Returns: peak
+    Returns: integers(peak)
     """
     if not list_of_integers:
         return None
