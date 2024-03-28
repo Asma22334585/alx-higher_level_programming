@@ -2,7 +2,9 @@
 """fetches https://intranet.hbtn.io/status"""
 from urllib import request
 
+
 if __name__ == "__main__":
+
     with request.urlopen("https://intranet.hbtn.io/status") as response:
         response = response.read()
         print("Body response:")
