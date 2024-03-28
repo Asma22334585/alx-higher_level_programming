@@ -16,10 +16,8 @@ def find_peak(list_of_integers):
 
     while l < h:
         middle = (l + h) // 2
-
         if list_of_integers[middle] > list_of_integers[middle + 1]:
             h = middle
         else:
             l = middle + 1
-
     return list_of_integers[l]
