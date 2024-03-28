@@ -4,10 +4,11 @@
 import sys
 from urllib import request, error
 
+
 if __name__ == "__main__":
     url = sys.argv[1]
-
     r = request.Request(url)
+
     try:
         with request.urlopen(r) as response:
             print(response.read().decode())
