@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""sends a request to the URL and displays the body of the response (decoded in utf-8)"""
+"""sends a request to the URL and displays
+the body of the response (decoded in utf-8)"""
 
 import sys
 from urllib import request, error
